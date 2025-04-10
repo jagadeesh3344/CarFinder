@@ -1,0 +1,47 @@
+.drawer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background-color: var(--background);
+    border-left: 1px solid var(--border);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-md);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.drawerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--border);
+}
+
+.drawerTitle {
+    font-size: var(--text-xl);
+    color: var(--text);
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: var(--text-lg);
+}
+
+.drawerContent {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.emptyState {
+    text-align: center;
+    color: var(--text-light);
+    padding: var(--space-8) 0;
+}

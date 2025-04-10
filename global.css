@@ -1,0 +1,94 @@
+:root {
+  /* New Color Palette */
+  --primary: #3a86ff;
+  --primary-hover: #2667cc;
+  --secondary: #8338ec;
+  --accent: #ff006e;
+  --success: #06d6a0;
+  --text: #1a1a2e;
+  --text-light: #4a4a6a;
+  --border: #e2e8f0;
+  --background: #f8f9fa;
+  --card-bg: #ffffff;
+
+  /* Dark Mode Colors */
+  --dark-primary: #4cc9f0;
+  --dark-secondary: #b5179e;
+  --dark-text: #f8f9fa;
+  --dark-text-light: #adb5bd;
+  --dark-background: #1a1a2e;
+  --dark-card-bg: #16213e;
+
+  /* Enhanced Typography */
+  --font-main: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  
+  /* Borders */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Dark Mode */
+.dark, [data-theme="dark"] {
+  --primary: var(--dark-primary);
+  --secondary: var(--dark-secondary);
+  --text: var(--dark-text);
+  --text-light: var(--dark-text-light);
+  --background: var(--dark-background);
+  --card-bg: var(--dark-card-bg);
+  --bg: var(--dark-background);
+  --border: #2d3748;
+}
+
+/* Ensure dark mode applies to all elements */
+.dark body,
+[data-theme="dark"] body {
+  color: var(--dark-text);
+  background-color: var(--dark-background);
+}

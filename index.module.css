@@ -1,0 +1,136 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-6);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+}
+
+.preferences {
+    display: flex;
+    gap: var(--space-4);
+    align-items: center;
+}
+
+.typeSelect {
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text);
+    font-size: var(--text-sm);
+}
+
+.toggleButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: var(--transition-normal);
+}
+
+.toggleButton:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-sm);
+}
+
+.searchContainer {
+    max-width: 800px;
+    margin: var(--space-6) auto;
+}
+
+.searchBar {
+    width: 100%;
+    padding: var(--space-4);
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: var(--text-lg);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-normal);
+    background: var(--bg);
+    color: var(--text);
+}
+
+.searchBar:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.3);
+}
+
+.mainLayout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--space-8);
+    margin-top: var(--space-6);
+}
+
+.sidebar {
+    position: sticky;
+    top: var(--space-6);
+    align-self: start;
+}
+
+.content {
+    padding: 0 var(--space-4);
+}
+
+.sectionTitle {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-6);
+    color: var(--text);
+    position: relative;
+    padding-bottom: var(--space-2);
+}
+
+.sectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.featuredGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-6);
+    margin: var(--space-8) 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+    }
+
+    .mainLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .hero {
+        padding: var(--space-8) var(--space-4);
+    }
+    
+    .hero h1 {
+        font-size: var(--text-3xl);
+    }
+    
+    .hero p {
+        font-size: var(--text-lg);
+    }
+}
